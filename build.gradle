@@ -11,6 +11,8 @@ buildscript {
 }
 
 plugins {
+    id 'java-gradle-plugin'
+    id 'groovy'
     id 'maven'
     id 'maven-publish'
 }
@@ -27,14 +29,15 @@ apply plugin: 'maven'
 apply plugin: 'java'
 apply plugin: 'groovy'
 
-group = 'com.github.alexfu'
-version = "3.0.2"
+group 'com.github.samfaina'
+version '1.0'
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 dependencies {
     compile gradleApi()
     compile localGroovy()
-    compile 'com.android.tools.build:gradle:3.4.0'
+    compile 'com.android.tools.build:gradle:3.5.0'
 }
+

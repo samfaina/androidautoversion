@@ -1,4 +1,4 @@
-package com.github.alexfu
+package com.github.samfaina
 
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.AppPlugin
@@ -72,9 +72,9 @@ class AndroidAutoVersionPlugin implements Plugin<Project> {
                 output.versionNameOverride = versionName
                 output.versionCodeOverride = versionCode
 
-                output.processManifest.doLast {
+                output.getProcessManifestProvider().get().doLast {
                     File manifestFile = new File(
-                        output.processManifest.manifestOutputDirectory.get().asFile,
+                        output.getProcessManifestProvider().get().manifestOutputDirectory.get().asFile,
                         "AndroidManifest.xml")
                     Node manifest = new XmlParser().parse(manifestFile)
                     Namespace ns = new Namespace("http://schemas.android.com/apk/res/android", "android")

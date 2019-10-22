@@ -31,7 +31,7 @@ buildscript {
     maven { url 'https://jitpack.io' }
   }
   dependencies {
-    classpath 'com.github.alexfu:androidautoversion:$latest_version'
+    classpath 'com.github.samfaina:androidautoversion:$latest_version'
   }
 }
 ```
@@ -42,7 +42,7 @@ Change `$latest_version` to the latest release version found [here](https://gith
 Include the following in your app-level `build.gradle` file:
 
 ```groovy
-apply plugin: 'com.github.alexfu.androidautoversion'
+apply plugin: 'com.github.samfaina.androidautoversion'
 ```
 
 ## Step 3

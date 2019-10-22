@@ -1,4 +1,4 @@
-package com.github.alexfu
+package com.github.samfaina
 
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
